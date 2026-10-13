@@ -22,6 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 插件占位 Activity：运行时会被替换成插件中的真实 Activity -->
+        <activity
+            android:name=".plugin.PluginHostActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

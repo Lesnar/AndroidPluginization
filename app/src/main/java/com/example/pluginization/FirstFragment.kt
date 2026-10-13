@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.pluginization.databinding.FragmentFirstBinding
+import com.example.pluginization.plugin.PluginManager
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -34,6 +35,10 @@ class FirstFragment : Fragment() {
 
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+
+        binding.buttonPlugin.setOnClickListener {
+            PluginManager.startPluginActivity(requireContext(), "com.example.stub.MainActivity")
         }
     }
 
